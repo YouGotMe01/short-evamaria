@@ -12,9 +12,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '18037664'))
-API_HASH = environ.get('API_HASH', '2f30344d1a5d5fefc42241ab6c65d02d')
-BOT_TOKEN = environ.get('BOT_TOKEN', "6131262953:AAEJ_i0pK74C3jsp49NQP8OkGIyDxdsw0_g")
+API_ID = int(environ.get('API_ID', '23809446'))
+API_HASH = environ.get('API_HASH', '49ab36959f20c82d60f0256155fd1777')
+BOT_TOKEN = environ.get('BOT_TOKEN', "6513384826:AAGxGp67ucHUx2W-dqyj7t9SabV0s9MuNwU")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -22,22 +22,22 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/3ae93577d725232d76c70.jpg https://telegra.ph/file/dd9e9394747d5449d041e.jpg https://telegra.ph/file/0c9b0067986d6d1788ba4.jpg https://telegra.ph/file/ccf02acc3d83673c075ee.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1392566136').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1057332403').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', '-1001814606077')
+auth_channel = environ.get('AUTH_CHANNEL', '-1001560411075')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://evamaria:evamaria@cluster0.f91rn.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Evamaria")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://test:test@cluster0.nlv47gm.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "DavidNew")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001760665688'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002049922371'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
@@ -68,8 +68,8 @@ LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
     
       # URL Shortener #
 
-URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'https://easysky.in')
-URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '105ec72247b5ac93ba5084bf11fd4e678a300d6f')
+URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'https://tnshort.net')
+URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '30cc9878bce79f87e57a8240113894faea387e47')
 
      # Auto Delete For Group Message (Self Delete) #
 SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 300))
